@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <head>
     <title>Projects</title>
     <style>
@@ -27,7 +25,7 @@
         .buttons {
             margin-top: 10px;
         }
-        .buttons a {
+        .buttons button {
             margin-right: 10px;
             color: navy;
             text-decoration: none;
@@ -50,23 +48,94 @@
             text-align: center;
             border: 2px solid navy;
         }
+        .project {
+            display: none;
+        }
+        .project.active {
+            display: block;
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 2px solid navy;
+        }
     </style>
+    <script>
+        function showProject(projectId) {
+            const projects = document.getElementsByClassName('project');
+            for (let i = 0; i < projects.length; i++) {
+                projects[i].classList.remove('active');
+            }
+            document.getElementById(projectId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
     <div class="banner">
         <h1>Projects</h1>
         <div class="buttons">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="skills.html">Skills</a>
+            <button onclick="showProject('project1')">Database Design and Development with SQL</button>
+            <button onclick="showProject('project2')">Programming with Java</button>
+            <button onclick="showProject('project3')">Server Technology</button>
+            <button onclick="showProject('project4')">Web Programming</button>
         </div>
     </div>
     <div class="container">
         <div class="content">
-            <h2>Projects</h2>
-            <!-- Add your projects content here -->
+            <div id="project1" class="project">
+                <h3>Database Design and Development with SQL</h3>
+                <p>
+                    In the "Database Design and Development" course, I undertook a high-stakes project that involved building a comprehensive company database in MySQL.
+                    This project showcases my ability to navigate and utilize SQL databases effectively, demonstrating my proficiency in performing queries, managing data, and optimizing database performance.
+                    With SQL being a widely used language for database creation in real-world scenarios, this project exemplifies my competence in this essential skill for system administration.
+                </p>
+                <p>
+                    Check out the project resources:
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/Company_DB_Model.jpg">Database Model</a>
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/Company_DB_Script.docx">Database Script</a>
+                </p>
+            </div>
+            <div id="project2" class="project">
+                <h3>Programming with Java</h3>
+                <p>
+                    In the course "Programming I," I developed a captivating project using Alice and Java.
+                    By creating a forest scene with interactive characters, I showcased my foundational knowledge of Java programming and ability to employ proper syntax to bring the characters to life.
+                    This project underscores my understanding of fundamental programming principles and serves as evidence of my readiness to take on more complex software development projects.
+                </p>
+                <p>
+                    Check out the project resources:
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/Java-Alice_Project_Jackson_K.docx">Project Description</a>
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/alicecode.pdf">Code</a>
+                </p>
+            </div>
+            <div id="project3" class="project">
+                <h3>Server Technology</h3>
+                <p>
+                    The "Server Technology" course allowed me to delve into the realm of server configuration and management.
+                    As part of this course, I conducted extensive research and presented a comprehensive paper detailing the process of creating a server testing lab.
+                    The paper explores the configuration of diverse server types, such as domain controllers, email servers, web servers, and SQL database servers.
+                    This project demonstrates my advanced understanding of server technology, emphasizing my ability to handle various server environments and solidifying my expertise in system administration.
+                </p>
+                <p>
+                    Check out the project resources:
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/ServerTechnology_Project_Jackson_K.docx">Project Description</a>
+                </p>
+            </div>
+            <div id="project4" class="project">
+                <h3>Web Programming</h3>
+                <p>
+                    In the course "Web Programming," I ventured into the world of web development.
+                    I designed and coded a visually appealing webpage for a fictional technology company, utilizing HTML and CSS.
+                    This project showcases my understanding of web development principles and my ability to create engaging and functional web pages.
+                    It demonstrates my competency in web programming languages and highlights my potential for future roles in web or software development.
+                </p>
+                <p>
+                    Check out the project resources:
+                    <a href="https://github.com/katierj3394/katierj3394.github.io/blob/main/iTech_WebsiteProject_Jackson_K.docx">Project Description</a>
+                </p>
+            </div>
         </div>
     </div>
 </body>
 </html>
-
